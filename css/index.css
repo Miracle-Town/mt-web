@@ -14,6 +14,43 @@
     height: 100vh;
     filter: brightness(90%);
     object-fit: cover;
+    object-position: center;
+}
+
+/* 隐藏video 全屏按钮 */
+.carousel-item video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+/* 隐藏video 播放按钮 */
+.carousel-item video::-webkit-media-controls-play-button {
+    display: none;
+}
+/* 隐藏video 进度条 */
+.carousel-item video::-webkit-media-controls-timeline {
+    display: none;
+}
+/* 隐藏video 观看的当前时间 */
+.carousel-item video::-webkit-media-controls-current-time-display{
+    display: none;            
+}
+/* 隐藏video 剩余时间 */
+.carousel-item video::-webkit-media-controls-time-remaining-display {
+    display: none;            
+}
+/* 隐藏video 音量按钮 */
+.carousel-item video::-webkit-media-controls-mute-button {
+    display: none;            
+}
+.carousel-item video::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;            
+}
+/* 隐藏video 音量的控制条 */
+.carousel-item video::-webkit-media-controls-volume-slider {
+    display: none;            
+}
+/* 隐藏video 所有控件 */
+.carousel-item video::-webkit-media-controls-enclosure{ 
+    display: none;
 }
 
 .carousel-caption-middle {
