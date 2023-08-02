@@ -1,0 +1,41 @@
+name: 同步至 Origin Server
+#此文件用于自动同步至 Lighthouse Server
+#请勿修改或删除！！！
+#BY：ZhuMeng
+
+on:
+    push:
+        branches:
+            - main
+
+    #手动触发
+    workflow_dispatch:
+
+jobs:
+    build:
+        # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+        runs-on: ubuntu-latest
+        steps:
+            # 获取源码
+            - name: 迁出代码
+              # 使用action库  actions/checkout获取源码
+              uses: actions/checkout@master
+
+            # 上传
+            - name: 发布到腾讯云
+              uses: easingthemes/ssh-deploy@main
+              env:
+                # 私钥
+                SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+                # scp参数
+                ARGS: '-rltgoDzvO'
+                # 排除文件
+                EXCLUDE: '/.git/, /.github/'
+                # 源目录
+                SOURCE: ''
+                # 服务器ip：换成你的服务器IP
+                REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                # 用户
+                REMOTE_USER: 'root'
+                # 目标地址
+                TARGET: '/www/wwwroot/www.mtsmc.net'
