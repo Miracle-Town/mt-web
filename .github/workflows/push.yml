@@ -29,10 +29,18 @@ jobs:
                   echo "VERSION=$version" >> $GITHUB_ENV
                   echo "Latest commit version: $version"
 
-            - name: Update HTML with version
+            - name: 查询所有 HTML 文件
+              if: steps.check_trigger.outputs.trigger == 'true'
+              run: |
+                  find . -type f -name "*.html" > html_files.txt
+
+            - name: 更新 HTML 中的版本号
+              if: steps.check_trigger.outputs.trigger == 'true'
               run: |
                   version=${{ env.VERSION }}
-                  sed -i "s/{{VERSION}}/$version/g" index.html
+                  while IFS= read -r file; do
+                    sed -i "s/{{VERSION}}/$version/g" "$file"
+                  done < html_files.txt
 
             # 上传
             - name: 发布到腾讯云
