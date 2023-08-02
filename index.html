@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="RX工作室,Miracle Town,MT服务器,Minecraft,我的世界服务器,我的世界服务器">
+    <meta name="description"
+        content="Miracle Town，官方中文译名“奇迹之城”，是由一群热爱 Minecraft 的玩家自行搭建的非营利性纯净生电向服务器。我们期待用我们的热爱，能创造属于我们梦想中的奇迹之城，探索田园牧歌式的人类宜居家园。">
+    <title>Miracle Town | 田园牧歌 我们的家园</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top nav-origin" id="nav">
+        <div class="container">
+            <a class="navbar-brand" href="//mtsmc.net">
+                <img src="./img/logo.png" alt="Logo" width="200" height="auto" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="//mtsmc.net">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//wiki.mtsmc.net">Wiki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//satellite.mtsmc.net">云图</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//museum.mtsmc.net">博物馆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//wiki.mtsmc.net/rule">市民公约</a>
+                    </li>
+                </ul>
+                <a href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp" class="d-flex btn btn-outline-primary"
+                    type="button"><i class="bi bi-send"></i>申请问卷</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="index-banner" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#index-banner" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#index-banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#index-banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video autoplay="true" muted="true" loop="true" class="d-block">
+                    <source src="img/banner.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption carousel-caption-middle d-block">
+                    <h1>田园牧歌，我们的家园。</h1>
+                    <p>我们等你一起，探索田园牧歌式的人类宜居家园。</p>
+                    <a href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp" target="_blank"
+                        class="btn btn-outline-light btn-sm">现在加入</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/mt-1year.png" class="d-block" alt="">
+                <div class="carousel-caption carousel-caption-middle d-block">
+                    <h1>星垂平野，月起微光。</h1>
+                    <p>Miracle Town 一周年合影，尽在博物馆。</p>
+                    <a href="//museum.mtsmc.net" target="_blank" class="btn btn-outline-light btn-sm">去看看</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/sky-city.jpg" class="d-block" alt="">
+                <div class="carousel-caption carousel-caption-middle d-block">
+                    <h1>天空中传来低语，那是神明在祷告。</h1>
+                    <p>神秘的天空之城，等你来探索。 </p>
+                    <a href="//museum.mtsmc.net" target="_blank" class="btn btn-outline-light btn-sm">去看看</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#index-banner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#index-banner" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-success fw-bold" id="myModalLabel">复制成功</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center text-success fw-bold display-1">
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <br>
+                    你已成功复制服务器的 IP 地址，将其粘贴在游戏内的“服务器地址”处即可。一般来说，无需端口号即可加入服务器。
+                    如果连接服务器失败，请加上默认端口号25565后重试（即：“play.mtsmc.net:25565”）。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">明白了！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 text-center text-white" id="get">
+        <a data-bs-toggle="tooltip" data-bs-title="点击按钮以复制服务器 IP">
+            <button class="btn btn-outline-light btn-lg mb-2" type="button" onclick="copyToClipboard()"
+                data-bs-toggle="modal" data-bs-target="#myModal">
+                <i class="bi bi-browser-safari"></i>IP：play.mtsmc.net
+            </button></a>
+        <p class="my-0">
+            <i class="bi bi-bookmark-check-fill"></i> Java国际版 1.18.2
+        </p>
+    </div>
+
+
+    <div class="container what py-5">
+        <div class="row px-4">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="mx-auto">
+                    <img src="img/logo512.png" alt="Image" class="img-fluid what-logo">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>什么是 Miracle Town</h2>
+                <p>
+                    Miracle Town /ˈmɪrɪkəlˈtaʊn/，官方中文译名“奇迹之城”，是由一群热爱 Minecraft
+                    的玩家自行搭建的非营利性纯净生电向服务器。我们期待用我们的热爱，能创造属于我们梦想中的奇迹之城，探索田园牧歌式的人类宜居家园。
+                </p>
+                <a class="icon-link icon-link-hover" href="//wiki.mtsmc.net/history">
+                    了解我们的历史
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid feature">
+        <div class="container px-4 py-5">
+            <div class="pb-2 border-bottom">
+                <h2 class="pb-1">Miracle Town 的独到之处</h2>
+                <p>面面俱到，只为你考虑。</p>
+            </div>
+            <div class="row g-4 pt-5 row-cols-1 row-cols-lg-3">
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-coin"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">无氪金体验</h3>
+                    <p>纯净式公益运营，没有任何充值入口。我们尽最大的努力确保游戏公平，只为更好的游戏体验。</p>
+                </div>
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-tree"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">主打纯净式生存</h3>
+                    <p>道生一，一生二，三生万物。基于 Java 国际版的原版体验，让 Minecraft 回归生存玩法。</p>
+
+                </div>
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">开放共享式社区</h3>
+                    <p>Miracle Town 的玩家们来自世界各地，他们团结友爱、互助进取。这里，是激情四射、想法碰撞的天堂。</p>
+                </div>
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-houses-fill"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">田园牧歌式建筑</h3>
+                    <p>每一处建筑都经过了精心设计，美观而使用。这里是传统与现代的结合，是无限智慧的结晶。</p>
+                </div>
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-cpu-fill"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">强悍服务器配置</h3>
+                    <p>我们的服务器位于中国宿迁，有了AMD Ryzen 5900X 加持，以及高达 20M 的带宽，多人同服拒绝卡顿。</p>
+                </div>
+                <div class="col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">企业级运营</h3>
+                    <p>Miracle Town 由RX工作室（湖南阿尔克斯网络科技有限公司）运营，你的“腐竹”从此不跑路。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="apply">
+        <div class="pb-2 border-bottom">
+            <h2 class="fw-bold">申请流程</h2>
+            <p>简单几步，和 Miracle Town 的众多玩家一起创造精彩世界！</p>
+        </div>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="bi bi-1-circle"></i>
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">做好准备</h3>
+                    <p>你需要同一个 Minecraft 国际版正版账号，然后前往 Wiki 阅读<a href="https://wiki.mtsmc.net/rule"
+                            target="_blank">《Miracle Town 市民公约》</a>。</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="bi bi-2-circle"></i>
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">填写表单</h3>
+                    <p>同意我们的《隐私政策》和《服务条款》，并前往<a href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp"
+                            target="_blank">收集表单</a>登记你的游戏 ID 和详细信息。</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="bi bi-3-circle"></i>
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">等待审核</h3>
+                    <p>我们会尽快审核你的申请信息，你可以在<a href="https://docs.qq.com/sheet/DWXR6aFhYbnZJbXBa"
+                            target="_blank">这里</a>查看你的审核进度。加入我们的QQ群并保持活跃有利于快速审核。</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">加入游戏</h3>
+                    <p>审核完毕，你就可以通过游戏 IP 加入服务器了！不妨去 <a href="https://wiki.mtsmc.net/" target="_blank">Wiki</a>
+                        看看，它会对你有所帮助。</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center apply-btn">
+            <a href="#" class="btn btn-primary"><i class="bi bi-send"></i>申请问卷</a>
+            <a class="icon-link icon-link-hover link-secondary" href="//wiki.mtsmc.net/history">
+                查看审核进度<i class="bi bi-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 px-5 links">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pic-card" id="pic-1">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-center">全自动熔炉打包机</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo-blue.jpg" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <small>工业区</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-person-circle"></i>
+                                <small>四叶</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pic-card" id="pic-2">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-center">Shiny教堂</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo-blue.jpg" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <small>主城</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-person-circle"></i>
+                                <small>mcv</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pic-card" id="pic-3">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-center">海底地铁</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo-blue.jpg" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <small>海底</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-person-circle"></i>
+                                <small>未知</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3 position-relative link-card" id="museum">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">博物馆 Museum</h1>
+                <p class="col-md-8 fs-4">Miracle Town Museum 是由 MT
+                    服务器管理组建设运营的游戏截图站点。在这里，我们将精心挑选一些由玩家投稿的截图，以便让更多人欣赏到这些令人惊叹的作品。</p>
+                <a href="//museum.mtsmc.net" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="bi bi-box-arrow-up-right"></i>去看展
+                </a>
+            </div>
+        </div>
+
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3 position-relative link-card" id="khl">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">语音社区 Kook</h1>
+                <p class="col-md-8 fs-4">快加入 Miracle Town 的官方语音频道，在这里你可以与服内好友一起语音游戏，相互协作。
+                    更重要的是，在重大直播和活动时它都能用得上。</p>
+                <a href="https://kook.top/w295sb" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="bi bi-box-arrow-up-right"></i>加入社区
+                </a>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="satellite">
+                    <div>
+                        <h2>卫星云图 Satellite</h2>
+                        <p>前往与游戏服务器实时同步的 地图页面 ，看看众多玩家们的作品。与此同时，你甚至可以和服务器内的玩家在线聊天，
+                            所有Web端的聊天内容都将与游戏内的聊天实时同步。</p>
+                        <a href="//satellite.mtsmc.net" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>漫步云端
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="wiki">
+                    <div>
+                        <h2>官方百科 Wiki</h2>
+                        <p>开放共享的 Wiki 将是整个服务器使用的百科全书，我们期待它能面面俱到地提供任何你想要了解多有内容，
+                            并助力整个社区开放共享文化的发展。</p>
+                        <a href="//wiki.mtsmc.net" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>去了解
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch mb-4">
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="qq">
+                    <div>
+                        <h2>QQ Group</h2>
+                        <p>前往 Miracle Town 官方 QQ 群，和数以百计的玩家们一起交流和讨论！
+                            在这里，你还能掌握第一手的官方消息，紧跟我们的运营动态。</p>
+                        <a href="//jq.qq.com/?_wv=1027&k=Gllh6gt6" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>火速入群
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="Github">
+                    <div>
+                        <h2>开源仓库 Github</h2>
+                        <p>想要学习？这里会是个好地方。Github 托管着 Miracle Town 的 Wiki 和官网 Web 页面，
+                            我们期待这些代码可以帮助你迈入更加神奇的大门。</p>
+                        <a href="https://github.com/Miracle-Town" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>去 Star
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch mb-4">
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="report">
+                    <div>
+                        <h2>报告问题 Report</h2>
+                        <p>服务器宕机了，或者是有 Bug？还是你对服务器有有着真诚的建议？
+                            请别犹豫，把这些问题报告给我们，让我们一起把 MT 变得更好！</p>
+                        <a href="//url.rxgzs.cn/tucao" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>我要吐槽
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="h-100 p-5 rounded-3 position-relative link-card" id="mail">
+                    <div>
+                        <h2>举报玩家 Accusation</h2>
+                        <p>发现不公正的游戏行为？发现管理组的腐败行为？请依据《Miracle Town 市民公约》向我们检举，
+                            共创更好的家园环境。
+                        </p>
+                        <a href="https://github.com/Miracle-Town" target="_blank" class="btn btn-outline-secondary">
+                            <i class="bi bi-box-arrow-up-right"></i>mts@rxgzs.cn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container py-5">
+        <div class="pb-2 border-bottom">
+            <h2 class="fw-bold">我们的团队</h2>
+            <p>Miracle Town 的运营团队从玩家中来，致力于打造扁平化的管理组。</p>
+        </div>
+
+        <div class="row my-4 text-center" id="person">
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&amp;nk=1533180937&amp;s=640" alt="img">
+                <h2 class="fw-normal">逐梦</h2>
+                <p class="text-body-secondary">RX工作室 CEO & MT 服主</p>
+            </div>
+
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=2215694085&s=640" alt="img">
+                <h2 class="fw-normal">Alan Wu</h2>
+                <p class="text-body-secondary">RX工作室成员 & MT 运营组组长</p>
+            </div>
+
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=2596851581&s=640" alt="img">
+                <h2 class="fw-normal">五月ngyuq</h2>
+                <p class="text-body-secondary">RX工作室 SAO & MT 运营组成员</p>
+            </div>
+        </div>
+
+        <div class="row my-4 text-center" id="person">
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=475027748&s=640" alt="img">
+                <h2 class="fw-normal">昔日live</h2>
+                <p class="text-body-secondary">RX工作室 HR & MT 运营组成员</p>
+            </div>
+
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=1695140113&s=640" alt="img">
+                <h2 class="fw-normal">森稳Xenwayne</h2>
+                <p class="text-body-secondary">觅忆视觉主理人 & MT 运营组成员</p>
+            </div>
+
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=227268395&s=640" alt="img">
+                <h2 class="fw-normal">酸奶Yogurt44</h2>
+                <p class="text-body-secondary">MT 运营组成员 & 玩家管理</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid" id="qa">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold py-4 text-white">常见问题</h2>
+            <div class="accordion mb-5 px-5" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            我没有国际正版账号，盗版能加入服务器吗？
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>不可以。</strong>处于安全考虑，Miracle Town 开启了正版验证，仅限 Java 版正版玩家加入。
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            为什么我的朋友可以加入服务器，但我却不可以？
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>加入我们的 QQ 群是必要条件。</strong>只有在群内才能让我们的管理员确认你是真人，
+                            这样才能让你加入服务器。如果长时间没有通过审核，请联系管理员。
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            你们提供 Minecraft 的安装包吗？
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>不提供。</strong>根据 Mojang 的 EULA，我们不提供 Minecraft 的安装包，
+                            因为这是一项侵权行为。
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFour">
+                            我需要为此付费加入服务器吗？
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>不需要。</strong>Miracle Town 是公益服务器，任何人都可以免费加入。
+                            同样，如果有人向你索要费用，都不是官方人员，切勿上当。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <footer>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top">
+                <div class="col mb-3">
+                    <a href="//mtsmc.net" class="d-flex align-items-center mb-3 text-decoration-none">
+                        <img class="img-fluid footer-logo" src="img/logo.png" alt="">
+                    </a>
+                    <h5 class="text-center">田园牧歌 我们的家园</h5>
+                </div>
+
+                <div class="col mb-3"></div>
+
+                <div class="col mb-3">
+                    <h5>站点</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="//mtsmc.net" class="nav-link p-0 text-body-secondary">主站</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="//wiki.mtsmc.net"
+                                class="nav-link p-0 text-body-secondary">Wiki</a></li>
+                        <li class="nav-item mb-2"><a href="//museum.mtsmc.net"
+                                class="nav-link p-0 text-body-secondary">博物馆</a></li>
+                        <li class="nav-item mb-2"><a href="//satellite.mtsmc.net"
+                                class="nav-link p-0 text-body-secondary">卫星云图</a></li>
+                        <li class="nav-item mb-2"><a href="//status.rxgzs.cn"
+                                class="nav-link p-0 text-body-secondary">服务状态</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>联系我们</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="//url.rxgzs.cn/tucao"
+                                class="nav-link p-0 text-body-secondary">报告问题</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/Miracle-Town"
+                                class="nav-link p-0 text-body-secondary">Github</a></li>
+                        <li class="nav-item mb-2"><a href="https://jq.qq.com/?_wv=1027&k=Gllh6gt6"
+                                class="nav-link p-0 text-body-secondary">QQ群 992530110</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:mts@rxgzs.cn"
+                                class="nav-link p-0 text-body-secondary">邮箱 mts@rxgzs.cn</a></li>
+                        <li class="nav-item mb-2"><a href="tel:4000542188"
+                                class="nav-link p-0 text-body-secondary">400-054-2188</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>关于我们</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="//rxgzs.cn"
+                                class="nav-link p-0 text-body-secondary">RX工作室</a></li>
+                        <li class="nav-item mb-2"><a href="//open.rxgzs.cn/join"
+                                class="nav-link p-0 text-body-secondary">工作机会</a></li>
+                        <li class="nav-item mb-2"><a href="//wiki.mtsmc.net/history"
+                                class="nav-link p-0 text-body-secondary">大事记</a></li>
+                        <li class="nav-item mb-2"><a href="//url.rxgzs.cn/tucao"
+                                class="nav-link p-0 text-body-secondary">报告问题</a></li>
+                        <li class="nav-item mb-2"><a href="//light.rxgzs.cn"
+                                class="nav-link p-0 text-body-secondary">Minecraft Light</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-center pb-5 text-body-secondary">
+                <small>
+                    <p>
+                        <a class="text-decoration-none text-reset" href="//wiki.mtsmc.net/rule" target="_blank">市民公约</a>
+                        |
+                        <a class="text-decoration-none text-reset" href="//rxgzs.cn/clause" target="_blank">服务条款</a>
+                        |
+                        <a class="text-decoration-none text-reset" href="//rxgzs.cn/privacy" target="_blank">隐私政策</a> |
+                        <a class="text-decoration-none text-reset" href="//rxgzs.cn/privacy"
+                            target="_blank">湖南阿尔克斯网络科技有限公司</a> |
+                        <a class="text-decoration-none text-reset" href="https://beian.miit.gov.cn/"
+                            target="_blank">湘ICP备2022013019号-2</a>
+                        <br>
+                        Copyright © 2021~2023 <a class="text-decoration-none text-reset" href="https://rxgzs.cn"
+                            target="_blank">RX Studio</a> All rights reserved.
+                        <br>
+                        Operated by RX Studio Web Group.
+                    </p>
+                </small>
+            </div>
+        </footer>
+    </div>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@import url('../bootstrap/bootstrap-icons.css');
+
+.nav-origin {
+    background-color: #ffffff8c !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bi {
+    margin-right: 5px;
+}
+
+.icon-link i {
+    position: relative;
+    top: -3px;
+}
