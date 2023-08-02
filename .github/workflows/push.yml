@@ -30,13 +30,11 @@ jobs:
                   echo "Latest commit version: $version"
 
             - name: 查询所有 HTML 文件
-              if: steps.check_trigger.outputs.trigger == 'true'
               run: |
                 find . -type f -name "*.html" > html_files.txt
                 cat html_files.txt # 输出查找到的 HTML 文件列表
 
             - name: 更新 HTML 中的版本号
-              if: steps.check_trigger.outputs.trigger == 'true'
               run: |
                 version=${{ env.VERSION }}
                 while IFS= read -r file; do
@@ -45,7 +43,6 @@ jobs:
                 done < html_files.txt
 
             - name: 输出修改后的 HTML 文件列表
-              if: steps.check_trigger.outputs.trigger == 'true'
               run: |
                 cat html_files.txt # 输出修改后的 HTML 文件列表
 
