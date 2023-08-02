@@ -6,7 +6,7 @@ name: 同步至 Origin Server
 on:
     push:
         branches:
-            main
+            - main
 
 
     #手动触发
