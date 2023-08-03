@@ -55,7 +55,7 @@ jobs:
                 # scp参数
                 ARGS: '-rltgoDzvO'
                 # 排除文件
-                EXCLUDE: '/.git/, /.github/'
+                EXCLUDE: '/.git/, /.github/, /README.md, /LICENSE, /html_files.txt'
                 # 源目录
                 SOURCE: ''
                 # 服务器ip：换成你的服务器IP
