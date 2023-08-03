@@ -122,13 +122,15 @@
 
     <section class="container-fluid py-5 text-center text-white" id="get">
         <a data-bs-toggle="tooltip" data-bs-title="点击按钮以复制服务器 IP">
-            <button class="btn btn-outline-light btn-lg mb-2" type="button" onclick="copyToClipboard()"
+            <button class="btn btn-outline-light btn-lg mb-4 fs-2 fw-bold" type="button" onclick="copyToClipboard()"
                 data-bs-toggle="modal" data-bs-target="#myModal">
-                <i class="bi bi-browser-safari"></i>play.mtsmc.net
+                <i class="bi bi-browser-safari"></i><span id="ServerIP">play.mtsmc.net</span>
             </button></a>
-        <p class="my-0">
-            Java 国际版 1.18.2
-        </p>
+        <div class="row my-0 mx-auto" style="max-width: 500px;">
+            <span class="col"><i class="bi bi-check2"></i> 正版验证开启</span>
+            <span class="col"><i class="bi bi-2-square"></i>当前周目 S2</span>
+            <span class="col"><i class="bi bi-controller"></i>游戏版本 1.18.2</span>
+        </div>
     </section>
 
 
@@ -159,7 +161,7 @@
                 <h2 class="pb-1">Miracle Town 的独到之处</h2>
                 <p>面面俱到，只为你考虑。</p>
             </div>
-            <div class="row g-4 pt-5 row-cols-1 row-cols-lg-3">
+            <div class="row g-4 pt-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <div class="col">
                     <div
                         class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
@@ -218,7 +220,7 @@
             <h2 class="fw-bold">申请流程</h2>
             <p>简单几步，和 Miracle Town 的众多玩家一起创造精彩世界！</p>
         </div>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+        <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-4">
             <div class="col d-flex align-items-start">
                 <div
                     class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -474,7 +476,7 @@
             <p>Miracle Town 的运营团队从玩家中来，致力于打造扁平化的管理组。</p>
         </div>
 
-        <div class="row my-4 text-center" id="person">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-4 text-center" id="person">
             <div class="col-lg-4">
                 <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&amp;nk=1533180937&amp;s=640" alt="img">
                 <h2 class="fw-normal">逐梦</h2>
@@ -492,9 +494,7 @@
                 <h2 class="fw-normal">五月ngyuq</h2>
                 <p class="text-body-secondary">RX工作室 SAO & MT 运营组成员</p>
             </div>
-        </div>
 
-        <div class="row my-4 text-center" id="person">
             <div class="col-lg-4">
                 <img class="rounded-circle" src="https://q1.qlogo.cn/g?b=qq&nk=475027748&s=640" alt="img">
                 <h2 class="fw-normal">昔日live</h2>
