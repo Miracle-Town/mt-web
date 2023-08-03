@@ -1,13 +1,10 @@
-window.onload = () => {
-    document.getElementById('index-banner').style.marginTop = navbar.offsetHeight + 'px';
-}
-
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 function copyToClipboard() {
     // 获取要复制的文本内容
-    var copyText = "play.mtsmc.net";
+    let copy = document.getElementById("ServerIP");
+    var copyText = copy.innerText;
 
     // 创建一个隐藏的 textarea 元素
     var textarea = document.createElement("textarea");
