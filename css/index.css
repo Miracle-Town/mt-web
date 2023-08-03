@@ -124,7 +124,7 @@
 }
 
 .link-card:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
@@ -133,7 +133,7 @@
 }
 
 .pic-card:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
