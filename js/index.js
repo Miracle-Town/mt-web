@@ -1,6 +1,12 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+//微信端适配
+document.addEventListener("WeixinJSBridgeReady", function () {
+    document.getElementById('banner-video').play();
+}, false);
+
+
 function copyToClipboard() {
     // 获取要复制的文本内容
     let copy = document.getElementById("ServerIP");
@@ -23,5 +29,5 @@ function copyToClipboard() {
 
     // 删除临时 textarea 元素
     document.body.removeChild(textarea);
-   
+
 }
