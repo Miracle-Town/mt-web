@@ -120,16 +120,74 @@
         </div>
     </section>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="errorToast" class="toast bg-blur" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header text-bg-danger">
+                <i class="bi bi-bug-fill"></i>
+                <strong class="me-auto">Ops! 我们出了点状况</strong>
+                <small>现在</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p class="my-0">
+                    Java 游戏服务由于未知原因离线，可能正在维护，也可能是出了点问题。你可以稍后再试，或者前往维护计划页面查看当前是否正在维护。
+                    <br><strong>如果你怀疑服务器宕机，请立即联系管理员。</strong>
+                </p>
+                <div class="mt-2">
+                    <a target="_blank" class="btn btn-sm btn-outline-danger "
+                        href="http://jq.qq.com/?_wv=1027&k=Gllh6gt6">
+                        <i class="bi bi-box-arrow-up-right"></i>联系管理员</a>
+                    <a target="_blank" class="icon-link icon-link-hover link-secondary mx-2"
+                        href="//status.rxgzs.cn/maintenance">
+                        查看维护计划
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="birthdayToast" class="toast bg-blur" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header text-bg-primary">
+                <strong class="me-auto">🎂🎉 我们要过生日啦！</strong>
+                <small>2023/08/17</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p class="my-0">
+                    2021.8.17 是特别的一天，我们以“新手镇”的名字启航，而后更名为 Miracle Town。这里，是奇迹之城，给数百位玩家留下了珍贵的回忆。在此，我们诚挚地邀请您参加 2 周年庆典！
+                </p>
+                <div class="mt-2">
+                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="//wiki.mtsmc.net/2years">
+                        <i class="bi bi-box-arrow-up-right"></i>去看看</a>
+                    <a target="_blank" class="icon-link icon-link-hover link-secondary mx-2"
+                        href="//wiki.mtsmc.net/history">
+                        了解我们的历史<i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="container-fluid py-5 text-center text-white" id="get">
         <a data-bs-toggle="tooltip" data-bs-title="点击按钮以复制服务器 IP">
-            <button class="btn btn-outline-light btn-lg mb-4 fs-2 fw-bold" type="button" onclick="copyToClipboard()"
+            <button class="btn btn-outline-light btn-lg mb-3 fs-2 fw-bold" type="button" onclick="copyToClipboard()"
                 data-bs-toggle="modal" data-bs-target="#myModal">
                 <i class="bi bi-browser-safari"></i><span id="ServerIP">play.mtsmc.net</span>
             </button></a>
+
+        <div class="row mb-3 mx-auto" style="max-width: 260px;">
+            <span class="col"><i class="bi bi-hdd-network-fill"></i><span id="status"></span></span>
+            <span class="col"><i class="bi bi-people-fill"></i><span id="people"></span></span>
+        </div>
+
         <div class="row my-0 mx-auto" style="max-width: 500px;">
             <span class="col"><i class="bi bi-check2"></i> 正版验证开启</span>
             <span class="col"><i class="bi bi-2-square"></i>当前周目 S2</span>
-            <span class="col"><i class="bi bi-controller"></i>游戏版本 1.18.2</span>
+            <span class="col"><i class="bi bi-controller"></i>游戏版本 <span id="game-version"></span></span>
         </div>
     </section>
 
