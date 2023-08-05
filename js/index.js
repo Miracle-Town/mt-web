@@ -29,5 +29,44 @@ function copyToClipboard() {
 
     // 删除临时 textarea 元素
     document.body.removeChild(textarea);
+}
 
+const errorToast = document.getElementById('errorToast');
+const birthdayToast = document.getElementById('birthdayToast');
+
+window.onload = () => {
+    getPing();
+    const toastBootstrap2 = bootstrap.Toast.getOrCreateInstance(birthdayToast)
+    toastBootstrap2.show()
+}
+
+function getPing() {
+    let status = document.getElementById("status");
+    let people = document.getElementById("people");
+    let gameVersion = document.getElementById("game-version");
+
+    fetch('https://api.mtsmc.net/ping/get-info')
+        .then(response => response.json()) // 将响应解析为 JSON
+        .then(data => {
+            if (data.errorcode == 404) {
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(errorToast)
+                toastBootstrap.show()
+                status.innerText = "离线";
+                people.innerText = "null";
+                gameVersion.innerText = "null";
+            }
+            else {
+                status.innerText = "在线";
+                people.innerText = data.players.online + " / " + data.players.max;
+                gameVersion.innerText = data.version.name;
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching JSON:', error);
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(errorToast)
+            toastBootstrap.show()
+            status.innerText = "unknown";
+            people.innerText = "null";
+            gameVersion.innerText = "null";
+        });
 }
