@@ -20,3 +20,8 @@
     position: relative;
     top: -3px;
 }
+
+.bg-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
