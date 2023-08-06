@@ -177,17 +177,36 @@
             <button class="btn btn-outline-light btn-lg mb-3 fs-2 fw-bold" type="button" onclick="copyToClipboard()"
                 data-bs-toggle="modal" data-bs-target="#myModal">
                 <i class="bi bi-browser-safari"></i><span id="ServerIP">play.mtsmc.net</span>
-            </button></a>
+            </button>
+        </a>
 
-        <div class="row mb-3 mx-auto" style="max-width: 260px;">
-            <span class="col"><i class="bi bi-hdd-network-fill"></i><span id="status"></span></span>
-            <span class="col"><i class="bi bi-people-fill"></i><span id="people"></span></span>
-        </div>
+        <div class="placeholder-glow" id="ping-area">
+            <p class="row mx-auto" style="max-width: 260px;">
+                <span class="ping-info mx-1 px-2 placeholder col">
+                    <i class="bi bi-hdd-network-fill"></i>
+                    <span id="status">unknown</span>
+                </span>
+                <span class="ping-info mx-1 px-2 placeholder col">
+                    <i class="bi bi-people-fill"></i>
+                    <span id="people">null</span>
+                </span>
+            </p>
 
-        <div class="row my-0 mx-auto" style="max-width: 500px;">
-            <span class="col"><i class="bi bi-check2"></i> 正版验证开启</span>
-            <span class="col"><i class="bi bi-2-square"></i>当前周目 S2</span>
-            <span class="col"><i class="bi bi-controller"></i>游戏版本 <span id="game-version"></span></span>
+            <p class="row my-0 mx-auto" style="max-width: 520px;">
+                <span class="ping-info mx-1 px-2 placeholder col">
+                    <i class="bi bi-check2"></i>
+                    <span>正版验证开启</span>
+                </span>
+                <span class="ping-info mx-1 px-2 placeholder col">
+                    <i class="bi bi-2-square"></i>
+                    <span>当前周目 S2</span>
+                </span>
+                <span class="ping-info mx-1 px-2 placeholder col">
+                    <i class="bi bi-controller"></i>
+                    <span>游戏版本 </span>
+                    <span id="game-version">null</span>
+                </span>
+            </p>
         </div>
     </section>
 
@@ -285,7 +304,7 @@
                 </div>
                 <div>
                     <h3 class="fs-2 text-body-emphasis">做好准备</h3>
-                    <p>你需要同一个 Minecraft 国际版正版账号，然后前往 Wiki 阅读<a href="https://wiki.mtsmc.net/rule"
+                    <p>你需要拥有一个 Minecraft 国际版正版账号，然后前往 Wiki 阅读<a href="https://wiki.mtsmc.net/rule"
                             target="_blank">《Miracle Town 市民公约》</a>。</p>
                 </div>
             </div>

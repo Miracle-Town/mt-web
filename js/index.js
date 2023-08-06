@@ -40,6 +40,13 @@ window.onload = () => {
     toastBootstrap2.show()
 }
 
+function displayPingInfo() {
+    let pingInfo = document.getElementsByClassName("ping-info");
+    for (let i = 0; i < pingInfo.length; i++) {
+        pingInfo[i].classList.remove("placeholder");
+    }
+}
+
 function getPing() {
     let status = document.getElementById("status");
     let people = document.getElementById("people");
@@ -51,14 +58,16 @@ function getPing() {
             if (data.errorcode == 404) {
                 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(errorToast)
                 toastBootstrap.show()
-                status.innerText = "离线";
+                status.innerText = "当前离线";
                 people.innerText = "null";
                 gameVersion.innerText = "null";
+                displayPingInfo();
             }
             else {
-                status.innerText = "在线";
+                status.innerText = "当前在线";
                 people.innerText = data.players.online + " / " + data.players.max;
                 gameVersion.innerText = data.version.name;
+                displayPingInfo();
             }
         })
         .catch(error => {
@@ -68,5 +77,6 @@ function getPing() {
             status.innerText = "unknown";
             people.innerText = "null";
             gameVersion.innerText = "null";
+            displayPingInfo();
         });
 }
