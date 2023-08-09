@@ -23,16 +23,7 @@ function check() {
 
         requestUrl = "https://api.mtsmc.net/white-list/query?player=" + username;
 
-        var myHeaders = new Headers();
-        myHeaders.append("User-Agent", "mtsmc.net/1.0.0");
-
-        var requestOptions = {
-            method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-        };
-
-        fetch(requestUrl, requestOptions)
+        fetch(requestUrl)
             .then(response => response.json())
             .then(result => {
                 if (result.status == "200") {
