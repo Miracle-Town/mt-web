@@ -1,0 +1,10 @@
+.banner {
+    background: url(../img/check-banner.jpg) no-repeat center;
+    background-size: cover;
+    height: 40vh;
+}
+
+.check-area {
+    position: relative;
+    top: -8vh;
+}
