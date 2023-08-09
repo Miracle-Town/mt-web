@@ -12,7 +12,11 @@
     background-color: #ffffff85!important;
 }
 
-.bi {
+.btn .bi {
+    margin-right: .5rem;
+}
+
+.copyright .bi {
     margin-right: .5rem;
 }
 
@@ -24,4 +28,14 @@
 .bg-blur {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+}
+
+.footer-logo {
+    width: 100%;
+    height: auto
+}
+
+.copyright a:hover {
+    color: #0d6efd !important;
+    text-decoration: underline !important;
 }
