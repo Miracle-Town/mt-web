@@ -66,7 +66,8 @@ function getPing() {
             else {
                 status.innerText = "当前在线";
                 people.innerText = data.players.online + " / " + data.players.max;
-                gameVersion.innerText = data.version.name;
+                //gameVersion.innerText = data.version.name;
+                gameVersion.innerText = "Java 1.18.2";
                 displayPingInfo();
             }
         })
