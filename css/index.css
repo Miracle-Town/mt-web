@@ -140,6 +140,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
+.pic-card .bi {
+    margin-right: .5rem;
+}
+
 #pic-1 {
     background-image: url('../img/rlj.jpg');
     background-size: cover;
