@@ -35,10 +35,17 @@ function copyToClipboard() {
 //初始化提示框
 const errorToast = bootstrap.Toast.getOrCreateInstance(document.getElementById('errorToast'))
 const birthdayToast = bootstrap.Toast.getOrCreateInstance(document.getElementById('birthdayToast'))
+const endToast = bootstrap.Toast.getOrCreateInstance(document.getElementById('endToast'))
 
-//初始化Get-Ping区域
+//展示endToast
+function displayEndToast() {
+    endToast.show();
+}
+
+//初始化窗口
 window.onload = () => {
     getPing();
+    displayEndToast();
 }
 
 //移除Get-Ping占位符

@@ -44,8 +44,8 @@
                         <a class="nav-link" href="//wiki.mtsmc.net/rule">市民公约</a>
                     </li>
                 </ul>
-                <a target="_blank" href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp"
-                    class="d-flex btn btn-outline-primary" type="button">
+                <a id="navbar-join-btn" target="_blank" href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp"
+                    class="d-flex btn btn-outline-light" type="button">
                     <i class="bi bi-send"></i>申请问卷
                 </a>
             </div>
@@ -58,9 +58,23 @@
                 aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#index-banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#index-banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#index-banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
+            <div class="carousel-item active">
+                <img src="img/end.jpg" class="d-block" alt="">
+                <div class="carousel-caption carousel-caption-middle d-block">
+                    <h1>欲买桂花同载酒，终不似，少年游。</h1>
+                    <p class="mb-3" style="max-width: 800px; margin: auto;">
+                        因现有服务器将于 2024 年 1 月 10 日到期，
+                        Miracle Town 管理组经过慎重讨论决定本次到期后将永久关闭 Miracle Town 服务器，
+                        届时 Miracle Town提供的所有服务将不可用
+                    </p>
+                    <a href="https://cdn.rxgzs.cn/mt/mtend.pdf" target="_blank" class="btn btn-outline-light btn-sm">查看停服公告</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
                 <video id="banner-video" autoplay muted loop class="d-block" x5-playsinline="true" playsinline="true"
                     webkit-playsinline="true" preload="auto" x5-video-player-fullscreen="false">
                     <source src="img/banner.mp4" type="video/mp4">
@@ -72,6 +86,7 @@
                         class="btn btn-outline-light btn-sm">现在加入</a>
                 </div>
             </div>
+
             <div class="carousel-item">
                 <img src="img/2years/bg.jpg" class="d-block" alt="">
                 <div class="carousel-caption carousel-caption-middle d-block">
@@ -80,6 +95,7 @@
                     <a href="//wiki.mtsmc.net/2years" target="_blank" class="btn btn-outline-light btn-sm">全程回顾</a>
                 </div>
             </div>
+
             <div class="carousel-item">
                 <img src="img/sky-city.jpg" class="d-block" alt="">
                 <div class="carousel-caption carousel-caption-middle d-block">
@@ -142,7 +158,7 @@
                         <i class="bi bi-box-arrow-up-right"></i>联系管理员</a>
                     <a target="_blank" class="icon-link icon-link-hover link-secondary mx-2"
                         href="//status.rxgzs.cn">
-                        查看维护计划
+                        查看状态页
                         <i class="bi bi-chevron-right"></i>
                     </a>
                 </div>
@@ -168,6 +184,30 @@
                     <a target="_blank" class="icon-link icon-link-hover link-secondary mx-2"
                         href="//wiki.mtsmc.net/history">
                         了解我们的历史<i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="endToast" class="toast bg-blur" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header text-bg-danger">
+                <i class="bi bi-clock-history bi-mr"></i>
+                <strong class="me-auto">Miracle Town 停服公告</strong>
+                <small>2023/12/5</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p class="my-0">
+                    <strong>“欲买桂花同载酒，终不似，少年游。”</strong>
+                    因现有服务器将于 2024 年 1 月 10 日到期，Miracle Town 管理组经过慎重讨论决定本次到期后将永久关闭 Miracle Town
+                    服务器，届时 Miracle Town 提供的所有服务将不可用。具体细节请查看<a href="https://cdn.rxgzs.cn/mt/mtend.pdf">停服公告</a>。
+                </p>
+                <div class="mt-2">
+                    <a target="_blank" class="btn btn-sm btn-danger"
+                        href="https://cdn.rxgzs.cn/mt/mtend.pdf">
+                        查看停服公告<i class="bi bi-chevron-right"></i>
                     </a>
                 </div>
             </div>
