@@ -27,11 +27,11 @@ function check() {
         fetch(requestUrl)
             .then(response => response.json())
             .then(result => {
-                if (result.status == "200") {
+                if (result.code == "200") {
                     document.getElementById("permission").innerHTML = result.permission;
                     loadingModal.hide();
                     successModal.show();
-                } else if (result.status == "404") {
+                } else if (result.code == "404") {
                     loadingModal.hide();
                     notfoundModal.show();
                 } else {
