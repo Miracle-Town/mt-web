@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="RX工作室,Miracle Town,MT服务器,Minecraft,我的世界服务器,我的世界服务器">
+    <meta name="description"
+        content="Miracle Town，官方中文译名“奇迹之城”，是由一群热爱 Minecraft 的玩家自行搭建的非营利性纯净生电向服务器。我们期待用我们的热爱，能创造属于我们梦想中的奇迹之城，探索田园牧歌式的人类宜居家园。">
+    <title>下载 | Miracle Town</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top nav-origin" id="nav" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="//mtsmc.net">
+                <img src="./img/logo-white.png" id="nav-logo" alt="Logo" width="200" height="auto" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="//mtsmc.net">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//wiki.mtsmc.net">Wiki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//satellite.mtsmc.net">云图</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//museum.mtsmc.net">博物馆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//wiki.mtsmc.net/rule">市民公约</a>
+                    </li>
+                </ul>
+                <a id="navbar-join-btn" target="_blank" href="https://docs.qq.com/form/page/DWUh5cmphZk1ad2dp"
+                    class="d-flex btn btn-outline-light" type="button">
+                    <i class="bi bi-send"></i>申请问卷
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="modal fade" id="loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">正在处理</h1>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="spinner-border m-3 text-primary" role="status" style="width: 3rem; height: 3rem">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="my-0 mt-2">请稍后...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="success" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success fw-bold" id="myModalLabel">你已获得下载权限</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center text-success fw-bold display-1">
+                            <i class="bi bi-check2-circle"></i>
+                        </div>
+                        <br>
+                        一封包含下载链接的邮件已发送至你的邮箱，请注意查收。若长时间未收到，请检查垃圾箱。
+                    </div>
+                    <div class="modal-footer">
+                        <a href="//mtsmc.net" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-box-arrow-up-right"></i>前往首页
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="invalid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-danger fw-bold" id="myModalLabel">下载通道已关闭</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center text-danger fw-bold display-1">
+                            <i class="bi bi-person-x"></i>
+                        </div>
+                        <br>
+                        你来晚了~本次下载通道已关闭。
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://jq.qq.com/?_wv=1027&k=Gllh6gt6" target="_blank"
+                            class="btn btn-secondary">联系我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="error" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-danger fw-bold" id="myModalLabel">Oooo...出了点问题！</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center text-danger fw-bold display-1">
+                            <i class="bi bi-bug"></i>
+                        </div>
+                        <br>
+                        API 服务器出现了一些问题，暂时无法下载。请稍后再试，或加入我们的 QQ 群联系管理员。
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://jq.qq.com/?_wv=1027&k=Gllh6gt6" target="_blank"
+                            class="btn btn-primary">
+                            <i class="bi bi-box-arrow-up-right"></i>联系我们
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid px-0">
+        <div class="banner w-100 d-flex align-items-center">
+            <h1 class="mx-auto text-center text-white fw-bold">存档下载 <span class="badge bg-secondary">S2</span></h1>
+        </div>
+        <div class="container">
+            <div class="card shadow-lg px-5 py-4 check-area">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col my-3 d-flex">
+                        <img src="img/folder.png" class="w-100 mx-auto" alt="">
+                    </div>
+                    <div class="col my-3 d-flex flex-column text-center">
+                        <div class="my-auto">
+                            <p>填写你的信息，以获得下载权限。</p>
+                            <p class="text-danger">请注意，本存档著作权归全体 MT 玩家所有，请勿未经许可擅自用作商业用途！</p>
+                            <p class="text-danger">下载开放时间：即日起至2024.2.5，如有需要请尽快下载。</p>
+                            <form novalidate>
+                                <div class="input-group input-group-lg has-validation mb-3">
+                                    <span class="input-group-text" id="inputGroupPrepend">
+                                        <i class="bi bi-person-circle mx-0"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="username"
+                                        aria-describedby="inputGroupPrepend" placeholder="游戏 ID" required>
+                                    <div class="invalid-feedback">
+                                        请输入你的游戏 ID。
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-lg has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="email"
+                                        aria-describedby="inputGroupPrepend" placeholder="邮箱" required>
+                                    <div class="invalid-feedback">
+                                        请输入你的邮箱。
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary my-3" id="post-btn" type="submit">查询</button>
+                            </form>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top">
+            <div class="col mb-3">
+                <a href="//mtsmc.net" class="d-flex align-items-center mb-3 text-decoration-none">
+                    <img class="img-fluid footer-logo" src="img/logo.png" alt="">
+                </a>
+                <h5 class="text-center">田园牧歌 我们的家园</h5>
+            </div>
+
+            <div class="col mb-3"></div>
+
+            <div class="col mb-3">
+                <h5>站点</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="//mtsmc.net" class="nav-link p-0 text-body-secondary">主站</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="//wiki.mtsmc.net"
+                            class="nav-link p-0 text-body-secondary">Wiki</a></li>
+                    <li class="nav-item mb-2"><a href="//museum.mtsmc.net"
+                            class="nav-link p-0 text-body-secondary">博物馆</a></li>
+                    <li class="nav-item mb-2"><a href="//satellite.mtsmc.net"
+                            class="nav-link p-0 text-body-secondary">卫星云图</a></li>
+                    <li class="nav-item mb-2"><a href="//status.rxgzs.cn"
+                            class="nav-link p-0 text-body-secondary">服务状态</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>联系我们</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="//url.rxgzs.cn/tucao"
+                            class="nav-link p-0 text-body-secondary">报告问题</a></li>
+                    <li class="nav-item mb-2"><a href="https://github.com/Miracle-Town"
+                            class="nav-link p-0 text-body-secondary">Github</a></li>
+                    <li class="nav-item mb-2"><a href="https://jq.qq.com/?_wv=1027&k=Gllh6gt6"
+                            class="nav-link p-0 text-body-secondary">QQ群 992530110</a></li>
+                    <li class="nav-item mb-2"><a href="mailto:mts@rxgzs.cn" class="nav-link p-0 text-body-secondary">邮箱
+                            mts@rxgzs.cn</a></li>
+                    <li class="nav-item mb-2"><a href="tel:4000542188"
+                            class="nav-link p-0 text-body-secondary">400-054-2188</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>关于我们</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="//rxgzs.cn" class="nav-link p-0 text-body-secondary">RX工作室</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="//open.rxgzs.cn/join"
+                            class="nav-link p-0 text-body-secondary">工作机会</a></li>
+                    <li class="nav-item mb-2"><a href="//wiki.mtsmc.net/history"
+                            class="nav-link p-0 text-body-secondary">大事记</a></li>
+                    <li class="nav-item mb-2"><a href="//open.rxgzs.cn"
+                            class="nav-link p-0 text-body-secondary">开放平台</a></li>
+                    <li class="nav-item mb-2"><a href="//light.rxgzs.cn"
+                            class="nav-link p-0 text-body-secondary">Minecraft Light</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright text-center pb-5 text-body-secondary">
+            <small>
+                <p>
+                    <a class="text-decoration-none text-reset" href="//wiki.mtsmc.net/rule" target="_blank">市民公约</a>
+                    |
+                    <a class="text-decoration-none text-reset" href="//rxgzs.cn/clause" target="_blank">服务条款</a>
+                    |
+                    <a class="text-decoration-none text-reset" href="//rxgzs.cn/privacy" target="_blank">隐私政策</a> |
+                    <a class="text-decoration-none text-reset" href="//rxgzs.cn/" target="_blank">湖南阿尔克斯网络科技有限公司</a>
+                    |
+                    <a class="text-decoration-none text-reset" href="https://beian.miit.gov.cn/"
+                        target="_blank">湘ICP备2022013019号-1</a>
+                    <br>
+                    Copyright © 2016~2023 <a class="text-decoration-none text-reset" href="https://rxgzs.cn"
+                        target="_blank">RX Studio</a> All rights reserved.
+                    <br>
+                    Operated by RX Studio Web Group.
+                    <br>
+                    <i class="bi bi-git"></i>Version: {{VERSION}}
+                </p>
+            </small>
+        </div>
+    </footer>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/download.js"></script>
+</body>
+
+</html>
