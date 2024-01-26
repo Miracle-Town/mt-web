@@ -28,10 +28,10 @@ function downloadRequest() {
         fetch(requestUrl)
             .then(response => response.json())
             .then(result => {
-                if (result.status == "200") {
+                if (result.code == "200") {
                     loadingModal.hide();
                     successModal.show();
-                } else if (result.status == "403") {
+                } else if (result.code == "403") {
                     loadingModal.hide();
                     invalidModal.show();
                 } else {
